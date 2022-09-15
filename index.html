@@ -45,6 +45,47 @@
         <div class="title">
             <h1>portfolio</h1>
         </div>
+        <!-- <nav>
+            <ul>
+                <li>all</li>
+                <li>programing</li>
+                <li>Photography</li>
+            </ul>
+        </nav> -->
+        <div class="cards">
+            <div class="card">
+                <a href="#">
+                <img src="./assets/pictures/animals4.jpg" alt="">
+                <div class="card-text">
+                    <h3 class="subtitle">subtitle</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui ad laboriosam non quos, aut tenetur aperiam
+                    </p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="./assets/pictures/animals4.jpg" alt="">
+                    <div class="card-text">
+                        <h3 class="subtitle">subtitle</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui ad laboriosam non quos, aut
+                            tenetur aperiam
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="./assets/pictures/animals4.jpg" alt="">
+                    <div class="card-text">
+                        <h3 class="subtitle">subtitle</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui ad laboriosam non quos, aut
+                            tenetur aperiam
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
     <section>
         <!-- about -->
@@ -87,6 +128,16 @@
             </div>
         </footer>
     </section>
+    <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400
+        });
+
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".your-element"));
+    </script>
 </body>
 
 </html>
