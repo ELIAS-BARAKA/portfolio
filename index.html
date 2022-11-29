@@ -12,22 +12,22 @@
 
 <body>
     <section id="home">
-        <header>
+        <header id="Header">
             <nav class="header-nav">
                 <ul>
                     <li><a href="#home">home</a></li>
-                    <li><a href="#resume">experiences</a></li>
-                    <li><a href="#">portfolio</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#resume">resume</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
         </header>
         <div id="intro">
             <!-- banner content -->
             <h5>hello, I am</h5>
-            <h1>ELIAS BARAKA DYESSE</h1>
-            <p>welcome to my website</p>
+            <h1><span>E</span>lias <span>B</span>araka <span>D</span>yesse</h1>
+            <p>and i'm a&nbsp;<span class="typewriter"></span></p>
         </div>
     </section>
     <section id="resume">
@@ -39,7 +39,7 @@
             content here
         </div>
     </section>
-    <section>
+    <section id="portfolio">
         <!-- PORTFOLIO  -->
         <!-- gallery of project done -->
         <div class="title">
@@ -55,20 +55,22 @@
         <div class="cards">
             <div class="card">
                 <a href="#">
-                <img src="./assets/pictures/animals4.jpg" alt="">
-                <div class="card-text">
-                    <h3 class="subtitle">subtitle</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui ad laboriosam non quos, aut tenetur aperiam
-                    </p>
-                </div>
+                    <img src="./assets/pictures/animals4.jpg" alt="" class="card-img">
+                    <div class="card-text">
+                        <h3 class="subtitle">subtitle</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui ad laboriosam non
+                            quos, aut tenetur aperiam
+                        </p>
+                    </div>
                 </a>
             </div>
             <div class="card">
                 <a href="#">
-                    <img src="./assets/pictures/animals4.jpg" alt="">
+                    <img src="./assets/pictures/animals4.jpg" alt="" class="card-img">
                     <div class="card-text">
                         <h3 class="subtitle">subtitle</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui ad laboriosam non quos, aut
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui ad laboriosam non
+                            quos, aut
                             tenetur aperiam
                         </p>
                     </div>
@@ -76,10 +78,11 @@
             </div>
             <div class="card">
                 <a href="#">
-                    <img src="./assets/pictures/animals4.jpg" alt="">
+                    <img src="./assets/pictures/bg-map.png" alt="" class="card-img">
                     <div class="card-text">
                         <h3 class="subtitle">subtitle</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui ad laboriosam non quos, aut
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique qui ad laboriosam non
+                            quos, aut
                             tenetur aperiam
                         </p>
                     </div>
@@ -87,49 +90,70 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="about">
         <!-- about -->
         <div class="title">
             <h1>about</h1>
         </div>
     </section>
-    <section>
+    <section id="contact">
         <!-- contact  -->
         <div class="title">
             <h1>contact</h1>
+        </div>
+        <div class="contact-content"></div>
+        <div class="social-media">
+            <ul>
+                <li>
+                    <a href="https://twitter.com/" title="twitter link"><img src="./assets/pictures/twitter.svg"
+                            alt="twitter-icon"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/" title="instagram link" target="_blank"><img
+                            src="./assets/pictures/instagram.svg" alt="instagram-icon"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/" title="linkedin link" target="_blank"><img
+                            src="./assets/pictures/linkedin.svg" alt="linkedin-icon"></a>
+                </li>
+                <li>
+                    <a href="https://github.com/ELIAS-BARAKA/" title="github link" target="_blank"><img
+                            src="./assets/pictures/github.svg" alt="github-icon"></a>
+                </li>
+            </ul>
         </div>
     </section>
     <section>
         <!-- footer  -->
         <footer>
-            <div class="social-media">
-                <ul>
-                    <li>
-                        <a href="https://www.facebook.com/" target="_blank"><img src="./assets/pictures/facebook.svg" alt="facebook-icon"></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/"><img src="./assets/pictures/twitter.svg" alt="twitter-icon"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/" target="_blank"><img src="./assets/pictures/instagram.svg" alt="instagram-icon"></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/" target="_blank"><img src="./assets/pictures/linkedin.svg" alt="linkedin-icon"></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/ELIAS-BARAKA/" target="_blank"><img src="./assets/pictures/github.svg" alt="github-icon"></a>
-                    </li>
-                </ul>
-            </div>
             <div class="copyright">
-                <p>Made with love <img src="assets/pictures/heart-solid.svg" width="14px" height="14px" /> by
+                <p>Made with <img src="assets/pictures/heart-solid.svg" width="12px" height="12px" /> by
                     D.B.ELIAS
                 </p>
             </div>
         </footer>
     </section>
     <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
-    <script type="text/javascript">
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
+
+        // Get the header
+        var header = document.getElementById("Header");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+    <!-- <script type="text/javascript">
         VanillaTilt.init(document.querySelectorAll(".card"), {
             max: 25,
             speed: 400
@@ -137,7 +161,7 @@
 
         //It also supports NodeList
         VanillaTilt.init(document.querySelectorAll(".your-element"));
-    </script>
+    </script> -->
 </body>
 
 </html>
